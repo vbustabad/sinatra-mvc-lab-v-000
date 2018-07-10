@@ -6,7 +6,7 @@ class PigLatinizer
     if user_phrase.size > 1
     	user_phrase.split(" ").collect { |word| vowels(word) || consonants(word) }.join(" ")
     else
-      vowels(word) || consonants(word)
+      vowels(user_phrase) || consonants(user_phrase)
     end
   end
 
