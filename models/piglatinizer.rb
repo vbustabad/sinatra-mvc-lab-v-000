@@ -5,10 +5,10 @@ class PigLatinizer
   def piglatinize(user_phrase)
     if user_phrase.size > 1
     	user_phrase.split(" ").collect { |word| vowels(word) || consonants(word) }.join(" ")
-    else 
+    else
       vowels(word) || consonants(word)
-    end 
-  end 
+    end
+  end
 
   def vowels(word)
     vowels = ['a','e','i','o','u']
@@ -21,8 +21,8 @@ class PigLatinizer
       word
     else
       consonants(word)
-    end 
-  end 
+    end
+  end
 
 
   def consonants(word)
@@ -40,7 +40,7 @@ class PigLatinizer
       add_both_consonants_to_end_of_word = word << word.slice(0, first_vowel)
       add_both_consonants_to_end_of_word << 'ay'
       add_both_consonants_to_end_of_word.slice(first_vowel, add_both_consonants_to_end_of_word.length)
-    else 
+    else
       vowels(word)
     end
   end
