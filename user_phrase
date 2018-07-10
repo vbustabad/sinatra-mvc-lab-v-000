@@ -1,0 +1,25 @@
+
+[1mFrom:[0m /home/vbustabad/sinatra-mvc-lab-v-000/models/piglatinizer.rb @ line 11 PigLatinizer#piglatinize:
+
+     [1;34m5[0m: [32mdef[0m [1;34mpiglatinize[0m(user_phrase)
+     [1;34m6[0m:   vowels = [[31m[1;31m'[0m[31ma[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31me[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mi[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mo[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mu[1;31m'[0m[31m[0m]
+     [1;34m7[0m:   consonants = [[31m[1;31m'[0m[31mb[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mc[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31md[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mf[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mg[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mh[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mj[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mk[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31ml[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mm[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mn[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mp[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mq[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mr[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31ms[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mt[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mv[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mw[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mx[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31my[1;31m'[0m[31m[0m,[31m[1;31m'[0m[31mz[1;31m'[0m[31m[0m]
+     [1;34m8[0m:   first_letter = user_phrase[[1;34m0[0m]
+     [1;34m9[0m:   second_letter = user_phrase[[1;34m1[0m]
+    [1;34m10[0m: 
+ => [1;34m11[0m:   binding.pry
+    [1;34m12[0m: 
+    [1;34m13[0m:   [32mif[0m user_phrase.include?(vowels)
+    [1;34m14[0m:     user_phrase << [31m[1;31m'[0m[31may[1;31m'[0m[31m[0m
+    [1;34m15[0m:     user_phrase
+    [1;34m16[0m:   [32melsif[0m first_letter.include?(consonants) && second_letter.include?(vowels)
+    [1;34m17[0m:     add_consonant_to_end_of_word = user_phrase << first_letter
+    [1;34m18[0m:     add_consonant_to_end_of_word << [31m[1;31m'[0m[31may[1;31m'[0m[31m[0m
+    [1;34m19[0m:     add_consonant_to_end_of_word
+    [1;34m20[0m:   [32melse[0m first_letter.include?(consonants) && second_letter.include?(consonants)
+    [1;34m21[0m:     add_both_consonants_to_end_of_word = user_phrase << first_letter + second_letter
+    [1;34m22[0m:     add_both_consonants_to_end_of_word << [31m[1;31m'[0m[31may[1;31m'[0m[31m[0m
+    [1;34m23[0m:     add_both_consonants_to_end_of_word
+    [1;34m24[0m:   [32mend[0m
+    [1;34m25[0m: [32mend[0m
+
